@@ -2,19 +2,20 @@
 @section('titulo', 'Listagem Aluno')
 @section('conteudo')
 
-    <h3>Listagem de alunos</h3>
-    <table>
-        <thead>
-            <tr>
-                <td>ID</td>
-                <td>Nome</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>teste</td>
-            </tr>
-        </tbody>
-    </table>
+    <h3>Formulário Aluno</h3>
+    <form action="{{route('aluno.store')}}" method="post">
+        @csrf
+        
+        <label for="">Nome</label><br>
+        <input type="text" name="nome"><br>
+
+        <label for="">cpf</label><br>
+        <input type="text" name="cpf"><br>
+        
+        <label for="">telefone</label><br>
+        <input type="text" name="telefone"><br>
+
+        <button type="submit">Salvar</button>
+
+    </form>
 @stop
